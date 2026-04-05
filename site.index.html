@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMZA | Carisma Shadow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #0a0a0f;
+            --card-bg: #12121c;
+            --text-color: #e0e0e0;
+            /* سر الكاريزما: الظلال الداخلية العميقة */
+            --inner-shadow: inset 6px 6px 12px #050508, inset -2px -2px 8px rgba(255,255,255,0.02);
+            --outer-glow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--main-bg);
+            /* تدرج خلفية ناعم جداً ليعطي عمق */
+            background: radial-gradient(circle at top, #1a1a2e 0%, #0a0a0f 100%);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* تصميم الشعار العلوي (الحفر الدائري) */
+        .logo-circle {
+            width: 100px;
+            height: 100px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--inner-shadow), var(--outer-glow);
+            position: relative;
+        }
+
+        .logo-circle span {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+
+        .logo-circle::before {
+            content: '👑';
+            position: absolute;
+            top: -15px;
+            font-size: 1.8rem;
+            filter: grayscale(1) brightness(0.6);
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        /* تصميم الزر المنحوت (Cut-out) */
+        .btn {
+            background: var(--card-bg);
+            padding: 22px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #999;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--inner-shadow);
+            border: 1px solid rgba(255,255,255,0.01);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* الأيقونات المجسمة (صور حقيقية) */
+        .btn img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.1));
+            transition: 0.4s;
+        }
+
+        /* تأثير الحركة واللمعان عند التفاعل */
+        .btn:hover {
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: inset 3px 3px 6px #050508, 0 15px 30px rgba(0,0,0,0.7);
+        }
+
+        .btn:hover img {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 0 10px white);
+        }
+
+        /* ألوان النيون المخصصة لكل تطبيق */
+        .inst:hover { border-color: #E1306C; }
+        .tele:hover { border-color: #0088cc; }
+        .snap:hover { border-color: #FFFC00; }
+        .whats:hover { border-color: #25D366; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-circle"><span>H</span></div>
+        <h1>HAMZA | حمزة</h1>
+
+        <div class="links">
+            <a href="https://instagram.com/q_7vmza" class="btn inst">
+                <span>INSTAGRAM</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="ig">
+            </a>
+
+            <a href="https://t.me/Q_HAMZA" class="btn tele">
+                <span>TELEGRAM</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="tg">
+            </a>
+
+            <a href="https://snapchat.com/add/q_7vmza" class="btn snap">
+                <span>SNAPCHAT</span>
+                <img src="https://www.iconpacks.net/icons/2/free-snapchat-logo-icon-2437-thumb.png" alt="sc">
+            </a>
+
+            <a href="https://wa.me/201066350362" class="btn whats">
+                <span>WHATSAPP</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="wa">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
